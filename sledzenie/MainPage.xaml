@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="sledzenie.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#00ff00" Padding="24" CornerRadius="0">
+            <Label Text="City Finder" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
+        </Frame>
+        <Entry x:Name="Miasto" />
+        <Button Text="znajdz miasto" Clicked="Button_Clicked" />
+        <maps:Map x:Name="taMapa" IsShowingUser="True" MapClicked="Localize_Me">
+            <x:Arguments>
+                <maps:MapSpan>
+                    <x:Arguments>
+                        <maps:Position>
+                            <x:Arguments>
+                                <x:Double>50.037385</x:Double>
+                                <x:Double>22.003349</x:Double>
+                            </x:Arguments>
+                        </maps:Position>
+                        <x:Double>0.04</x:Double>
+                        <x:Double>0.04</x:Double>
+                    </x:Arguments>
+                </maps:MapSpan>
+            </x:Arguments>
+        </maps:Map>
+    </StackLayout>
+
+</ContentPage>
